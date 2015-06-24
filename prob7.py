@@ -11,10 +11,8 @@ def eratosthenes2(n):
 
 
 def find_prime(goal_prime):
-    primes = set()
-    for num in eratosthenes2(goal_prime ** 2):
-        primes.add(num)
-        if len(primes) == goal_prime:
+    for i, num in enumerate(eratosthenes2(goal_prime ** 2)):
+        if i + 1 == goal_prime:
             return num
             break
 
